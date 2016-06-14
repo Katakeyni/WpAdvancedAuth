@@ -1,0 +1,7 @@
+{
+    "name": "aicha/wpauth",
+    "require": {},
+    "autoload": {
+      "psr-4": {"Aicha\\": "src/"}
+    }
+}
