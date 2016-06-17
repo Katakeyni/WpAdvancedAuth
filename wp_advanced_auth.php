@@ -9,3 +9,10 @@
 if ( ! defined( 'WPINC' ) ) {
     die;
 }
+
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$loader = new Aicha\PluginLoader();
+$shortcodes = new Aicha\Shortcodes();
+$loader->add_shortcode('helloworld', $shortcodes, 'helloShortcode');
+$loader->init();
