@@ -1,0 +1,26 @@
+.tab-item{
+	border-bottom: 1px solid #ccc;
+}
+.tabs .indicator{
+	height: 4px
+}
+.tab-content-item{
+	background: #fff;
+	padding: 15px;
+}
+ul.groupes-list li{
+	border-bottom: 1px solid #c8c8c8;
+	padding: 10px;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+.capibility-title{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+#capabilities-list .row{
+	margin-top: 15px;
+}
+.caplist-container{
+	margin-top: 15px;
+}
