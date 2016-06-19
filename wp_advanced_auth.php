@@ -15,9 +15,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $loader = new Aicha\PluginLoader();
 $shortcodes = new Aicha\Shortcodes();
 $assets = new Aicha\AssetsInit();
+$ajaxrunner = new Aicha\AjaxRunner();
 $loader->add_shortcode('helloworld', $shortcodes, 'helloShortcode');
 $loader->add_action( 'admin_enqueue_scripts', $assets, 'enqueue_stylesheets' );
 $loader->add_action( 'admin_enqueue_scripts', $assets, 'enqueue_scripts' );
+$loader->add_action( 'wp_ajax_create_new_groupe_action', $ajaxrunner, 'create_new_groupe_action' );
+$loader->add_action( 'wp_ajax_nopriv_create_new_groupe_action', $ajaxrunner, 'create_new_groupe_action' );
 $loader->init();
 
 function plugin_activation() {

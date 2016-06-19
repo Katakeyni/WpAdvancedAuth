@@ -22,5 +22,6 @@ class AssetsInit
 	public function enqueue_scripts(){
 		wp_enqueue_script( 'materialize-script', plugins_url( 'wp_advanced_auth/js/materialize.min.js' ), array('jquery') );
 		wp_enqueue_script( 'wp_auth_script', plugins_url( 'wp_advanced_auth/js/app.js' ), array('jquery', 'materialize-script') );
+			wp_localize_script('wp_auth_script', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
 	}
 }
